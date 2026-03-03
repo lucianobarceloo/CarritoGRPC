@@ -4,10 +4,6 @@
 package com.tienda.grpc;
 
 /**
- * <pre>
- * Representa un producto individual
- * </pre>
- *
  * Protobuf type {@code Producto}
  */
 public final class Producto extends
@@ -333,10 +329,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Representa un producto individual
-   * </pre>
-   *
    * Protobuf type {@code Producto}
    */
   public static final class Builder extends

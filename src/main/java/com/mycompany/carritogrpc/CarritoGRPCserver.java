@@ -3,27 +3,32 @@ package com.mycompany.carritogrpc;
 import com.tienda.grpc.CarritoServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
-public class CarritoGRPCserver {
-    public static void main(String[] args) throws InterruptedException {
-        // Configurar el servidor en el puerto 50051 y añadir el servicio
-        Server server = ServerBuilder.forPort(50051)
-                .addService(new CarritoServiceImpl())
-                .build();
+public class CarritoGRPCserver extends JFrame {
+    private JTable tablaInventario;
+    private DefaultTableModel model;
 
-        try {
-            server.start();
-            System.out.println("Servidor de Carrito iniciado en el puerto 50051...");
-            
-            // Mantener el servidor funcionando hasta que se apague
-            server.awaitTermination();
-            
-        } catch (IOException ex) {
-            Logger.getLogger(CarritoGRPCserver.class.getName())
-                  .log(Level.SEVERE, null, ex);
-        }
+    public CarritoGRPCserver() {
+        setTitle("Servidor de Inventario (gRPC)");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        model = new DefaultTableModel(new Object[]{"ID", "Producto", "Stock"}, 0);
+        tablaInventario = new JTable(model);
+        add(new JScrollPane(tablaInventario));
+        setVisible(true);
+
+        new Thread(() -> {
+            try {
+                Server server = ServerBuilder.forPort(50051)
+                        .addService(new CarritoServiceImpl(model))
+                        .build();
+                server.start();
+                server.awaitTermination();
+            } catch (Exception e) { e.printStackTrace(); }
+        }).start();
     }
+
+    public static void main(String[] args) { new CarritoGRPCserver(); }
 }

@@ -1,5 +1,6 @@
 com\tienda\grpc\Producto.class
 com\tienda\grpc\CarritoServiceGrpc.class
+com\tienda\grpc\EmptyRequestOrBuilder.class
 com\tienda\grpc\CarritoRequestOrBuilder.class
 com\tienda\grpc\CarritoServiceGrpc$1.class
 com\tienda\grpc\CarritoRequest$Builder.class
@@ -9,13 +10,19 @@ com\tienda\grpc\CarritoServiceGrpc$AsyncService.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceBaseDescriptorSupplier.class
 com\tienda\grpc\CarritoResponse.class
 com\tienda\grpc\CarritoResponse$1.class
+com\tienda\grpc\CatalogoResponse$Builder.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceBlockingStub.class
 com\tienda\grpc\Carrito.class
 com\tienda\grpc\CarritoResponseOrBuilder.class
 com\tienda\grpc\CarritoServiceGrpc$2.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceFutureStub.class
+com\tienda\grpc\EmptyRequest.class
 com\tienda\grpc\CarritoServiceGrpc$MethodHandlers.class
+com\tienda\grpc\CatalogoResponse$1.class
+com\tienda\grpc\CatalogoResponse.class
+com\tienda\grpc\EmptyRequest$1.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceMethodDescriptorSupplier.class
+com\tienda\grpc\EmptyRequest$Builder.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceStub.class
 com\tienda\grpc\CarritoRequest.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceImplBase.class
@@ -24,6 +31,8 @@ com\tienda\grpc\CarritoServiceImpl.class
 com\tienda\grpc\Producto$Builder.class
 com\tienda\grpc\CarritoServiceGrpc$3.class
 com\tienda\grpc\ProductoOrBuilder.class
+com\mycompany\carritogrpc\CarritoGRPCclientGUI.class
 com\tienda\grpc\CarritoResponse$Builder.class
 com\mycompany\carritogrpc\CarritoGRPCclient.class
+com\tienda\grpc\CatalogoResponseOrBuilder.class
 com\tienda\grpc\Producto$1.class

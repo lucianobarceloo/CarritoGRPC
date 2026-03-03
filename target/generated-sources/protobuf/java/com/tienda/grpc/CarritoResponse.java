@@ -4,10 +4,6 @@
 package com.tienda.grpc;
 
 /**
- * <pre>
- * La respuesta con el cálculo final
- * </pre>
- *
  * Protobuf type {@code CarritoResponse}
  */
 public final class CarritoResponse extends
@@ -359,10 +355,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * La respuesta con el cálculo final
-   * </pre>
-   *
    * Protobuf type {@code CarritoResponse}
    */
   public static final class Builder extends

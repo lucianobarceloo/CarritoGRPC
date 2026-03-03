@@ -3,9 +3,6 @@ package com.tienda.grpc;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * Definición del servicio
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.54.0)",
@@ -18,6 +15,37 @@ public final class CarritoServiceGrpc {
   public static final String SERVICE_NAME = "CarritoService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.tienda.grpc.EmptyRequest,
+      com.tienda.grpc.CatalogoResponse> getObtenerCatalogoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "obtenerCatalogo",
+      requestType = com.tienda.grpc.EmptyRequest.class,
+      responseType = com.tienda.grpc.CatalogoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tienda.grpc.EmptyRequest,
+      com.tienda.grpc.CatalogoResponse> getObtenerCatalogoMethod() {
+    io.grpc.MethodDescriptor<com.tienda.grpc.EmptyRequest, com.tienda.grpc.CatalogoResponse> getObtenerCatalogoMethod;
+    if ((getObtenerCatalogoMethod = CarritoServiceGrpc.getObtenerCatalogoMethod) == null) {
+      synchronized (CarritoServiceGrpc.class) {
+        if ((getObtenerCatalogoMethod = CarritoServiceGrpc.getObtenerCatalogoMethod) == null) {
+          CarritoServiceGrpc.getObtenerCatalogoMethod = getObtenerCatalogoMethod =
+              io.grpc.MethodDescriptor.<com.tienda.grpc.EmptyRequest, com.tienda.grpc.CatalogoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "obtenerCatalogo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tienda.grpc.EmptyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tienda.grpc.CatalogoResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CarritoServiceMethodDescriptorSupplier("obtenerCatalogo"))
+              .build();
+        }
+      }
+    }
+    return getObtenerCatalogoMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tienda.grpc.CarritoRequest,
       com.tienda.grpc.CarritoResponse> getProcesarCarritoMethod;
 
@@ -94,15 +122,22 @@ public final class CarritoServiceGrpc {
   }
 
   /**
-   * <pre>
-   * Definición del servicio
-   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Unario: Envía el carrito completo y recibe el total procesado
+     * Método para obtener productos disponibles (sin considerar stock)
+     * </pre>
+     */
+    default void obtenerCatalogo(com.tienda.grpc.EmptyRequest request,
+        io.grpc.stub.StreamObserver<com.tienda.grpc.CatalogoResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getObtenerCatalogoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Método para procesar la compra con validación de inventario
      * </pre>
      */
     default void procesarCarrito(com.tienda.grpc.CarritoRequest request,
@@ -113,9 +148,6 @@ public final class CarritoServiceGrpc {
 
   /**
    * Base class for the server implementation of the service CarritoService.
-   * <pre>
-   * Definición del servicio
-   * </pre>
    */
   public static abstract class CarritoServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -127,9 +159,6 @@ public final class CarritoServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service CarritoService.
-   * <pre>
-   * Definición del servicio
-   * </pre>
    */
   public static final class CarritoServiceStub
       extends io.grpc.stub.AbstractAsyncStub<CarritoServiceStub> {
@@ -146,7 +175,18 @@ public final class CarritoServiceGrpc {
 
     /**
      * <pre>
-     * Unario: Envía el carrito completo y recibe el total procesado
+     * Método para obtener productos disponibles (sin considerar stock)
+     * </pre>
+     */
+    public void obtenerCatalogo(com.tienda.grpc.EmptyRequest request,
+        io.grpc.stub.StreamObserver<com.tienda.grpc.CatalogoResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getObtenerCatalogoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Método para procesar la compra con validación de inventario
      * </pre>
      */
     public void procesarCarrito(com.tienda.grpc.CarritoRequest request,
@@ -158,9 +198,6 @@ public final class CarritoServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CarritoService.
-   * <pre>
-   * Definición del servicio
-   * </pre>
    */
   public static final class CarritoServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<CarritoServiceBlockingStub> {
@@ -177,7 +214,17 @@ public final class CarritoServiceGrpc {
 
     /**
      * <pre>
-     * Unario: Envía el carrito completo y recibe el total procesado
+     * Método para obtener productos disponibles (sin considerar stock)
+     * </pre>
+     */
+    public com.tienda.grpc.CatalogoResponse obtenerCatalogo(com.tienda.grpc.EmptyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getObtenerCatalogoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Método para procesar la compra con validación de inventario
      * </pre>
      */
     public com.tienda.grpc.CarritoResponse procesarCarrito(com.tienda.grpc.CarritoRequest request) {
@@ -188,9 +235,6 @@ public final class CarritoServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service CarritoService.
-   * <pre>
-   * Definición del servicio
-   * </pre>
    */
   public static final class CarritoServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<CarritoServiceFutureStub> {
@@ -207,7 +251,18 @@ public final class CarritoServiceGrpc {
 
     /**
      * <pre>
-     * Unario: Envía el carrito completo y recibe el total procesado
+     * Método para obtener productos disponibles (sin considerar stock)
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tienda.grpc.CatalogoResponse> obtenerCatalogo(
+        com.tienda.grpc.EmptyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getObtenerCatalogoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Método para procesar la compra con validación de inventario
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tienda.grpc.CarritoResponse> procesarCarrito(
@@ -217,7 +272,8 @@ public final class CarritoServiceGrpc {
     }
   }
 
-  private static final int METHODID_PROCESAR_CARRITO = 0;
+  private static final int METHODID_OBTENER_CATALOGO = 0;
+  private static final int METHODID_PROCESAR_CARRITO = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -236,6 +292,10 @@ public final class CarritoServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_OBTENER_CATALOGO:
+          serviceImpl.obtenerCatalogo((com.tienda.grpc.EmptyRequest) request,
+              (io.grpc.stub.StreamObserver<com.tienda.grpc.CatalogoResponse>) responseObserver);
+          break;
         case METHODID_PROCESAR_CARRITO:
           serviceImpl.procesarCarrito((com.tienda.grpc.CarritoRequest) request,
               (io.grpc.stub.StreamObserver<com.tienda.grpc.CarritoResponse>) responseObserver);
@@ -258,6 +318,13 @@ public final class CarritoServiceGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getObtenerCatalogoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tienda.grpc.EmptyRequest,
+              com.tienda.grpc.CatalogoResponse>(
+                service, METHODID_OBTENER_CATALOGO)))
         .addMethod(
           getProcesarCarritoMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -313,6 +380,7 @@ public final class CarritoServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CarritoServiceFileDescriptorSupplier())
+              .addMethod(getObtenerCatalogoMethod())
               .addMethod(getProcesarCarritoMethod())
               .build();
         }

@@ -20,44 +20,24 @@ public interface CarritoRequestOrBuilder extends
       getUsuarioIdBytes();
 
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   java.util.List<com.tienda.grpc.Producto> 
       getItemsList();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   com.tienda.grpc.Producto getItems(int index);
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   int getItemsCount();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   java.util.List<? extends com.tienda.grpc.ProductoOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   com.tienda.grpc.ProductoOrBuilder getItemsOrBuilder(

@@ -4,10 +4,6 @@
 package com.tienda.grpc;
 
 /**
- * <pre>
- * La petición contiene una lista de productos
- * </pre>
- *
  * Protobuf type {@code CarritoRequest}
  */
 public final class CarritoRequest extends
@@ -87,10 +83,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tienda.grpc.Producto> items_;
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   @java.lang.Override
@@ -98,10 +90,6 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   @java.lang.Override
@@ -110,10 +98,6 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   @java.lang.Override
@@ -121,10 +105,6 @@ private static final long serialVersionUID = 0L;
     return items_.size();
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   @java.lang.Override
@@ -132,10 +112,6 @@ private static final long serialVersionUID = 0L;
     return items_.get(index);
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
    * <code>repeated .Producto items = 2;</code>
    */
   @java.lang.Override
@@ -312,10 +288,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * La petición contiene una lista de productos
-   * </pre>
-   *
    * Protobuf type {@code CarritoRequest}
    */
   public static final class Builder extends
@@ -597,10 +569,6 @@ private static final long serialVersionUID = 0L;
         com.tienda.grpc.Producto, com.tienda.grpc.Producto.Builder, com.tienda.grpc.ProductoOrBuilder> itemsBuilder_;
 
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public java.util.List<com.tienda.grpc.Producto> getItemsList() {
@@ -611,10 +579,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public int getItemsCount() {
@@ -625,10 +589,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public com.tienda.grpc.Producto getItems(int index) {
@@ -639,10 +599,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder setItems(
@@ -660,10 +616,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder setItems(
@@ -678,10 +630,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder addItems(com.tienda.grpc.Producto value) {
@@ -698,10 +646,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder addItems(
@@ -719,10 +663,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder addItems(
@@ -737,10 +677,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder addItems(
@@ -755,10 +691,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder addAllItems(
@@ -774,10 +706,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder clearItems() {
@@ -791,10 +719,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public Builder removeItems(int index) {
@@ -808,10 +732,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public com.tienda.grpc.Producto.Builder getItemsBuilder(
@@ -819,10 +739,6 @@ private static final long serialVersionUID = 0L;
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public com.tienda.grpc.ProductoOrBuilder getItemsOrBuilder(
@@ -833,10 +749,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public java.util.List<? extends com.tienda.grpc.ProductoOrBuilder> 
@@ -848,10 +760,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public com.tienda.grpc.Producto.Builder addItemsBuilder() {
@@ -859,10 +767,6 @@ private static final long serialVersionUID = 0L;
           com.tienda.grpc.Producto.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public com.tienda.grpc.Producto.Builder addItemsBuilder(
@@ -871,10 +775,6 @@ private static final long serialVersionUID = 0L;
           index, com.tienda.grpc.Producto.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
      * <code>repeated .Producto items = 2;</code>
      */
     public java.util.List<com.tienda.grpc.Producto.Builder> 
